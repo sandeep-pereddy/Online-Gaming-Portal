@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamer's 4 Life</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8" />
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <div class="content">
+      <div class="con_div">
+    <div class="left">
+      <div class= "event">
+        <h3><%= result[0].connectionName %></h3>
+        <%if(usermodify){%>
+          <form method="post" >
+            <button class="button1" onclick="window.location.href='/updateUserConnection?connectionId=<%=result[0].connectionID %>'" type="button">Update</button>
+            <button class="button2" formaction="/deleteConnection?connectionId=<%=result[0].connectionID %>" > Remove</button>
+          </form>
+         <%}%>
+      </div>
+         <div class="conec_img">
+            <img src="../assets/images/<%= result[0].connectionID %>.JPG" alt="IMG" class="eventlogo" />
+         </div>
+        <div class="conec_details">
+          <p><%= result[0].location %></p>
+          <p><%= result[0].date %></p>
+          <p><%= result[0].time %></p>
+        </div>
+    </div>
+    <div class="right">
+            <p> Are you interested to join League?</p>
+            <%if(user){%>
+              <form method="post" >
+                <button class="button1" formaction= "/savedConnections?connectionId=<%=result[0].connectionID %>&rsvp=yes"> Yes</button>
+                <button class="button2" formaction="/savedConnections?connectionId=<%=result[0].connectionID %>&rsvp=no">No</button>
+                <button class="button3" formaction="/savedConnections?connectionId=<%=result[0].connectionID %>&rsvp=maybe">Maybe</button>
+                <input type="hidden" name ="action" value= "save">
+              </form>
+              <%}else{%>
+                <button onclick="window.location.href='connection?connectionId=<%=result[0].connectionID %>'" class = "button1" type="button">Yes</button>
+                <button onclick="window.location.href='connection?connectionId=<%=result[0].connectionID %>'" class = "button2" type="button">No</button>
+                <button onclick="window.location.href='connection?connectionId=<%=result[0].connectionID %>'" class = "button3" type="button">Maybe</button>
+              <%}%>
+
+
+        </div>
+      </div>
+
+    <div class = "details">
+        <h3>Details:</h3>
+        <p><%= result[0].details %></p>
+    </div>
+
+  </div>
+<% include partials/footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class = nav>
+    <%if(user){%>
+      <ul>
+        <li><a href="/" > <img src="../assets/images/logo.JPG" alt="logo" class="thumbnail"></a></li>
+            <li><a href="/signout">LOGOUT</a></li>
+            <li><a href="savedConnections">MY CONNECTIONS</a></li>
+            <li><a href="newConnection"> START A NEW CONNECTIONS</a></li>
+      </ul>
+      <p><a href="connections">Connections</a></p>
+      <p class="user-name">welcome <%= user.firstName%></p>
+    <%}else{%>
+      <ul>
+        <li><a href="/" > <img src="../assets/images/logo.JPG" alt="logo" class="thumbnail"></a></li>
+            <li><a href="signup">SIGN UP</a></li>
+            <li><a href="login">LOGIN</a></li>
+            <li><a href="newConnection"> START A NEW CONNECTIONS</a></li>
+      </ul>
+      <p><a href="connections">Connections</a></p>
+    <%}%>
+
+</div>

@@ -1,0 +1,175 @@
+img {
+	max-width: 100%;
+
+	}
+img.thumbnail {
+	width: 95px;
+	height: 85px;
+	}
+.nav {
+  overflow: hidden;
+  background-color: teal;
+}
+.nav ul{padding: 0;margin: 0;}
+a{text-decoration: none;}
+.nav li {
+  float: right;
+  color:white;
+  padding: 28px 10px;
+  font-size: 15px;
+  margin: 0px;
+	display: inline-block;
+}
+.header {
+    background: teal;
+    height: 110px;
+}
+.para_left{float: left}
+.user_name {
+    float: right;
+    width: 11%;
+    color: white;
+}
+.nav li:nth-child(1){float: none;padding: 10px}
+.content{
+        background-image:url("../images/background.jpg");
+        background-size: cover;
+        color: white;
+        padding: 40px;
+        word-spacing: 5px;
+        line-height: 1.25;
+        height: 400px;
+        margin: 0px;
+        font-size: 20px;
+position: relative;
+}
+
+.content ul{list-style-type: none;}
+.content a{
+    color: white;
+}
+body{
+    margin: 0px;
+}
+
+p{
+    margin: 0px;
+}
+
+.footer{
+    overflow: hidden;
+    background-color: teal;
+    height:40px;
+    padding-top: 15px;
+}
+.footer a{
+   text-align: left;
+   color: white;
+   padding-left: 25px;
+
+}
+.footer ul {
+    float: right;
+    margin: 0;
+    padding-right: 40px;
+}
+.footer ul li {
+    display: inline;
+}
+header p{padding-left: 15px;overflow: hidden;
+  background-color: teal;display: inline-block;}
+header a{color: white;}
+
+.conec_img{float: left; padding-right: 20px}
+img.eventlogo{
+    width: 95px;
+	height: 100px;
+}
+.conec_details{}
+.event{padding-bottom: 15px}
+.right{float: right;padding-right: 25px; padding-top: 22px;width: 32%;position: absolute;right: 0;top: 0;}
+.right p{padding-bottom: 20px;}
+.right button{margin-left: 20px;}
+.left{float: left; width:50%}
+.details{padding-top: 10px; clear: both;}
+.con_div{position: relative;}
+.button{background-color:black;color: white}
+.button1 {background-color: #4CAF50;color: white}
+.button2 {background-color: #f44336;color: white}
+.button3 {background-color: #008CBA;color: white}
+table, th, td {
+  padding: 10px;
+  border: 1px solid aliceblue;
+}
+table {border-collapse: collapse;width: 100%;}
+.table{
+    padding-top: 10px;
+}
+#connection-form{text-align: center;}
+input[type="submit"] {
+margin-top: 20px;
+}
+#connection-form div{padding: 10px;}
+#connection-form div label{padding-right: 10px;}
+.opq-div{position: absolute;
+    height: 430px;
+    background: aliceblue;
+    width: 400px;
+    opacity: .5;
+    right: 31%;
+    top: 8%;}
+
+.opq{position: absolute;
+		    height: 370px;
+		    background: aliceblue;
+		    width: 450px;
+		    opacity: .5;
+		    right: 31%;
+		    top: 8%;}
+.opq-create{position: absolute;
+		height: 430px;
+		background: aliceblue;
+		width: 450px;
+		opacity: .5;
+		right: 31%;
+		top: 8%;}
+.form_background {
+		    position: relative;
+				width: 450px;
+        left: 32%;
+		}
+.err-msg{color: red;}
+.contact{
+        background-image:url("../images/background.jpg");
+        background-size: cover;
+        color: white;
+        padding: 40px;
+        word-spacing: 5px;
+        line-height: 1.25;
+        height: 400px;
+        margin: 0px;
+        font-size: 20px;
+				text-align: center;
+
+}
+.about{
+        background-image:url("../images/background.jpg");
+        background-size: cover;
+        color: white;
+        padding: 40px;
+        word-spacing: 5px;
+        line-height: 1.25;
+        height: 400px;
+        margin: 0px;
+        font-size: 20px;
+				text-align: center;
+
+}
+p.user-name {
+    float: right;
+    margin-right: 30px;
+}
+#signup-form{padding-left: 15%;}
+form#signup-form div {padding: 10px;}
+form#signup-form p:first-child{padding-left: 20%;font-weight: bold;}
+.form-sub{margin-left: 30%;}

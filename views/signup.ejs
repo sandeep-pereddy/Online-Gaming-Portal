@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamer's 4 Life</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8" />
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+     <div class="content">
+       <div class="opq-create">
+       </div>
+       <div class="form_background">
+
+      <form id="signup-form" method="Post" action='/signup'>
+        <p style="color:black;">Create a Profile </p><br>
+        <%
+     if(error){
+     error.forEach(function(item){%>
+         <p class="err-msg"><%=item.msg %></p>
+         <%});} %>
+         <div>
+         <label for="firstName">FirstName: &nbsp; </label>
+         <input id="firstName" type="text" name="firstName">
+       </div>
+       <div>
+       <label for="lastName">LastName: &nbsp; </label>
+       <input id="lastName" type="text" name="lastName">
+     </div>
+        <div>
+        <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+        <input id="email" type="email" name="email">
+      </div>
+      <div>
+        <label for="password">Password:&nbsp;&nbsp;&nbsp;</label>
+        <input id="password" type="password" name="password">
+      </div>
+        <br><button class="form-sub">Submit</button>
+      </form>
+      <br/>
+    </div>
+    </div>
+  <% include partials/footer.ejs %>
+</body>
+</html>

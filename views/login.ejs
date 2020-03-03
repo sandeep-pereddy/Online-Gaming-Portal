@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamer's 4 Life</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8" />
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+     <div class="content">
+       <div class="opq">
+       </div>
+       <div class="form_background">
+
+      <form id="connection-form" method="Post" action='/login'>
+        <p style="color:black;">Login to your Profile </p><br><br>
+        <%
+     if(error){
+     error.forEach(function(item){%>
+         <p class="err-msg"><%=item.msg %></p>
+         <%});} %>
+         <%if(valid){%>
+           <p class="err-msg">    Username or Password is Not valid </p>
+         <%}%>
+        <div>
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password">
+      </div>
+        <br><button>Submit</button>
+      </form>
+      <br/>
+    </div>
+    </div>
+  <% include partials/footer.ejs %>
+</body>
+</html>

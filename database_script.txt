@@ -1,0 +1,94 @@
+use events;
+db.createCollection("connections");
+db.createCollection("users");
+db.createCollection("userconnections");
+db.connections.insert([
+{
+		"connectionID": "GMEL001",
+		"userID":"12ME001",
+		"connectionName": "FIFA E-World Cup",
+		"connectionTopic": "Gaming Leagues",
+		"details": "The tournament is virtual soccer equivalent to World Cup. Competitive gamers will play via EA Sports FIFA 19 Global Series, which features the popular soccer video game.",
+		"location": "Hosted by EA Sports, \n 912 M.C center, dallas,TX,75001",
+		"date": "october 25 2019",
+		"time": "10 A.M-6 P.M"
+},
+{
+		"connectionID": "GMEL002",
+		"userID": "12ME001",
+		"connectionName": "Counter-Strike",
+		"connectionTopic": "Gaming Leagues",
+		"details": "The Counter-Strike: Global Offensive (CS:GO) professional esports league is competitive tournament for gamers across the globe.All you need to participate is to sign up and play.",
+		"location": "Hosted by Counter strike Sports, \n J.F. clay center, dallas,TX,75001",
+		"date": "october 19 2019",
+		"time": "12 A.M-4 P.M"
+},
+{
+		"connectionID": "GMEL003",
+		"userID":"12ME002",
+		"connectionName": "Call of Duty Championship",
+		"connectionTopic": "Gaming Leagues",
+		"details": "The Call of Duty Championship is an annual Call of Duty tournament held at the end of the season to determine the World Champion of the Year. come and join the League.",
+		"location": "Hosted by call of Duty gaming zone, \n 1201,Newyork,NY,10001",
+		"date": "october 31 2019",
+		"time": "11 A.M-2 P.M"
+},
+{
+		"connectionID": "GMEL004",
+		"userID":"12ME002",
+		"connectionName": "FIFA Pro Club",
+		"connectionTopic": "Gaming Clubs",
+		"details": "Pro clubs is an online mode in FIFA 20 that allows you to create a Virtual Pro player and play your position on the pitch with teammates in a true representation .Become a member by joining the league.",
+		"location": "Hosted by FIFA Pro club, \n 9201 TX center,Newyork,NY,10001",
+		"date": "December 25 2019",
+		"time": "8 A.M-5 P.M"
+},
+{
+		"connectionID": "GMEL005",
+		"userID":"12ME001",
+		"connectionName": "NFL Fantasy",
+		"connectionTopic": "Gaming Clubs",
+		"details": "Play the official free fantasy football game of the NFL, featuring instant video highlights, free live scoring, custom leagues and more. All you need to participate is to sign up and Join the club.",
+		"location": "Hosted by NFL Sports club, \n 621 F.L club,Newyork,NY,10001",
+		"date": "November 16 2019",
+		"time": "10 A.M- 6 P.M"
+},
+{
+		"connectionID": "GMEL006",
+		"userID":"12ME002",
+		"connectionName": "PUBG",
+		"connectionTopic": "Gaming Clubs",
+		"details": "Global Competitive season for PUBG Mobile club. Play with best Pro/Semi-Pro players from around the world. sign up to experience the feel with world wide PUBG players.",
+		"location": "Hosted by PUBG PRO CLub, \n 3353, charlotte,NC,28262",
+		"date": "November 31 2019",
+		"time": "11 A.M- 3P.M"
+}
+]);
+
+db.users.insert([
+	{"userID":"12ME001", "firstName":"sandeep", "lastName":"Pereddy", "email":"sandeep.pereddy@gmail.com","password":"a4184c1a0272fbd42fbb851caa56fef56125e3d81270af0fc2f8503e5ee0c387fa71c98537d13c0fa86f9fe53f8756e717359defdb684922eb3fe6f190b938d4","salt":"df908100f722c506"},
+	{"userID":"12ME002", "firstName":"sai", "lastName":"bandar", "email":"sai12b@gmail.com","password":"518141fa2e024864e6160775fafabcdc9cbc3e3102c1272d9facd6c6887c4632eb540aee7e17b58197b88ea61688e083bdb6102ea380a9ef70b4a275b1ef9899","salt":"45ecad21c717bead"}
+]);
+
+db.userconnections.insert([
+{
+"userID" :"12ME001",
+"connectionID": "GMEL001",
+"rsvp":"yes"
+},
+{
+"userID" :"12ME001", 
+"connectionID": "GMEL005",
+"rsvp":"no"
+},
+{
+"userID" :"12ME002",
+"connectionID": "GMEL002",
+"rsvp":"maybe"
+},
+{
+"userID" :"12ME002",
+"connectionID": "GMEL005",
+"rsvp":"yes"
+}
+]);	

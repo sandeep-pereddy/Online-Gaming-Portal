@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamer's 4 Life</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8" />
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+     <div class="content">
+       <div class="opq-div">
+       </div>
+       <div class="form_background">
+       <form id="connection-form" method="POST" action="newConnection">
+        <%   if(error){
+         error.forEach(function(item){%>
+             <p class="err-msg"><%=item.msg %></p>
+             <%});} %>
+        <%if(flag){%>
+               <p class="err-msg">Please Login to add a new connection</p>
+             <%}%>
+         <div>
+       <label for="topic">Topic:</label>
+       <input id="topic" type="text" name="topic">
+     </div>
+     <div>
+       <label for="name">Name:</label>
+       <input id="name" type="text" name="name">
+     </div>
+     <div>
+       <label for="details">Details:</label>
+       <input id ="details" type="text" name="details">
+     </div>
+     <div>
+       <label for="location">Location:</label>
+       <input id="location" type="text" name="location">
+     </div>
+     <div>
+       <label for="date">Date:</label>
+       <input id="date" type="date" name="date">
+     </div>
+     <div>
+       <label for="fromtime">From Time:</label>
+       <input id="fromtime" type="time" name="fromtime">
+     </div>
+     <div>
+       <label for="totime">To Time:</label>
+       <input id="totime" type="time" name="totime">
+     </div>
+       <input type="submit" name="Submit"/>
+       </form>
+     </div>
+    </div>
+  <% include partials/footer.ejs %>
+</body>
+</html>

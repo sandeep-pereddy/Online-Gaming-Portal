@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamer's 4 Life</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8" />
+</head>
+<body>
+  <% include partials/header.ejs %>
+  <div class="content">
+    <div class="table">
+      <table >
+        <thead>
+        <tr>
+           <th>Gaming Event</th>
+           <th>Category</th>
+           <th>Joined?</th>
+         <th></th>
+        </tr>
+      </thead>
+      <tbody>
+              <% for(var i=0; i< data.userConnectionList.length ;i++) { %>
+            <tr>
+              <td class="connectionTable"><%= data.userConnectionList[i].Connection.connectionName %></td>
+              <td class="connectionTable"><%= data.userConnectionList[i].Connection.connectionTopic%>  </td>
+              <td class="connectionTable"><%= data.userConnectionList[i].rsvp%> </td>
+              <td>
+                <form method="post" >
+                <button class="button1" onclick="window.location.href='/connection?connectionId=<%= data.userConnectionList[i].Connection.connectionID %>'" type="button">Update</button>
+                <button class="button2" formaction='/savedConnections?connectionId=<%= data.userConnectionList[i].Connection.connectionID%>'> Remove</button>
+                <input type ="hidden" name ="action" value="delete"/>
+                </form>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+
+     </table>
+
+    </div>
+
+  </div>
+<% include partials/footer.ejs %>
+</body>
+</html>
